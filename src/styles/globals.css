@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  position: relative;
+}
+
+img{
+  max-width: 100%;
+}
+
+.galery-image:hover{
+  transform: scale(1.2);
+}
+
+.testemonial-card:hover{
+  transform: scale(1.05);
+
+}
+
+ul{
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+
+.link-bold {
+  font-weight: 500;
+}
+
+.table-cell{
+  font-size: 0.8rem;
+}
+
+.light-shadow{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.swal2-popup {
+  font-family: "Inter", sans-serif;
+}
+
+.swal2-confirm{
+  background-color: #21b0b7 !important;
+  border-color: white !important;
+}
+
+.fancy-span{
+  display: inline-block;
+  position: relative; 
+}
+
+.fancy-span:before,
+.fancy-span:after {
+  content: "";
+  position: absolute;
+  height: 55%;
+  border-bottom: 1px solid black;
+  top: 0;
+  width: 100vw;
+}
+.fancy-span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.paper-div{
+  background-color:rgb(240, 240, 240); 
+  clip-path: polygon(0 9%, 0 87%, 3% 100%, 18% 97%, 30% 90%, 41% 100%, 49% 92%, 58% 95%, 68% 91%, 80% 99%, 86% 92%, 97% 100%, 100% 88%, 100% 13%, 97% 0, 88% 0, 80% 6%, 70% 1%, 60% 6%, 52% 1%, 38% 8%, 31% 0%, 25% 6%, 15% 7%, 3% 1%);
+}
+
+.testemonial-image-clip-path{
+  clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 99%, 6% 100%, 12% 95%, 18% 97%, 24% 90%, 28% 96%, 34% 94%, 40% 90%, 44% 94%, 49% 100%, 54% 94%, 59% 96%, 67% 93%, 72% 98%, 80% 95%, 87% 89%, 93% 96%);
+
+}
+
+.filter-destination-dropdown .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
