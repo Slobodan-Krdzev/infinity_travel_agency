@@ -5,6 +5,7 @@ import Trending from "@/components/CarousellMain";
 import { Arangement } from "@/types/types";
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
+import { ALL_ARANGEMENTS } from "@/constants/constants";
 
 type ExoticDestinationsProps = {
   destinations: Arangement[];
@@ -40,7 +41,7 @@ export default ExoticDestinations;
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const destinationsRes = await fetch(
-      "http://localhost:4000/arangements?type_like=Exotic&isPublished=true&state=free"
+      `${ALL_ARANGEMENTS}?type_like=Exotic&isPublished=true&state=free`
     );
     const destinations = await destinationsRes.json();
 

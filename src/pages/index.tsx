@@ -9,7 +9,7 @@ import SectionTitle from "@/components/SectionTitle";
 import SeeMoreBtn from "@/components/SeeMoreBtn";
 import Testemonials from "@/components/Testemonials";
 import Trending from "@/components/CarousellMain";
-import { GALERY_ENDPOINT, TESTEMONIALS_ENDPOINT } from "@/constants/constants";
+import { ARANGEMENTS_PUBLISHED_FREE, GALERY_ENDPOINT, TESTEMONIALS_ENDPOINT } from "@/constants/constants";
 import { Arangement, GaleryImageType, TestemonialType } from "@/types/types";
 import { GetServerSideProps, NextPage } from "next";
 
@@ -61,7 +61,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const [allArangementsRes, testemonialsRes, galeryImagesRes] =
       await Promise.all([
         fetch(
-          "http://localhost:4000/arangements?isPublished_like=true&state_like=&isTrending_like=true"
+          `${ARANGEMENTS_PUBLISHED_FREE}&isTrending_like=true`
         ),
         fetch(TESTEMONIALS_ENDPOINT),
         fetch(GALERY_ENDPOINT),

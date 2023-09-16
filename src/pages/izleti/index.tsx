@@ -1,6 +1,7 @@
 import ArangmentListing from "@/components/ArangmentListing";
 import Banner from "@/components/Banner";
 import SectionTitle from "@/components/SectionTitle";
+import { ALL_ARANGEMENTS } from "@/constants/constants";
 import { Arangement } from "@/types/types";
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
@@ -36,7 +37,7 @@ export default Trips;
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const allTripsRes = await fetch(
-      "http://localhost:4000/arangements?type_like=Izlet&isPublished=true"
+      `${ALL_ARANGEMENTS}?type_like=Izlet&isPublished=true`
     );
     const allTrips = await allTripsRes.json();
 

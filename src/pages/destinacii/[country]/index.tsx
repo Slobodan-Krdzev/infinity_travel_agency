@@ -5,6 +5,7 @@ import Trending from "@/components/CarousellMain";
 import { Arangement, DropdownDestinationType } from "@/types/types";
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
+import { ARANGEMENTS_PUBLISHED_FREE, DESTINATIONS_ENDPOINT } from "@/constants/constants";
 
 type CountryProps = {
   hotels: Arangement[];
@@ -54,13 +55,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   try {
     const [hotelsRes, apartmentsRes, titleInfoRes] = await Promise.all([
       fetch(
-        `http://localhost:4000/arangements?isPublished_like=true&state_like=free&country_like=${destination}&type_like=Hotel`
+        `${ARANGEMENTS_PUBLISHED_FREE}&country_like=${destination}&type_like=Hotel`
       ),
       fetch(
-        `http://localhost:4000/arangements?isPublished_like=true&state_like=free&country_like=${destination}&type_like=Apartment`
+        `${ARANGEMENTS_PUBLISHED_FREE}&country_like=${destination}&type_like=Apartment`
       ),
       fetch(
-        `http://localhost:4000/dropdown-destinations?textEn_like=${destination}`
+        `${DESTINATIONS_ENDPOINT}?textEn_like=${destination}`
       ),
     ]);
 

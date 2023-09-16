@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import CarousellArangements from "@/components/CarousellArangements";
 import CarousellPictures from "@/components/CarousellPictures";
 import SectionTitle from "@/components/SectionTitle";
+import { ALL_ARANGEMENTS } from "@/constants/constants";
 import { Arangement } from "@/types/types";
 import { Stack, Typography } from "@mui/material";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -67,7 +68,7 @@ export default SingleTrip;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(
-    "http://localhost:4000/arangements?type_like=Izlet&isPublished=true"
+    `${ALL_ARANGEMENTS}?type_like=Izlet&isPublished=true`
   );
   const trips: Arangement[] = await res.json();
 

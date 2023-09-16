@@ -132,7 +132,7 @@ const ArangementDetailsPage: NextPage<ArangementDetailsPageProps> = ({
 export default ArangementDetailsPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("http://localhost:4000/arangements");
+  const res = await fetch(ALL_ARANGEMENTS);
   const data: Arangement[] = await res.json();
 
   const paths = data.map((arangment) => {

@@ -5,6 +5,7 @@ import Trending from "@/components/CarousellMain";
 import { Arangement } from "@/types/types";
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
+import { ALL_ARANGEMENTS } from "@/constants/constants";
 
 type ExploreMacedoniaProps = {
   arangementsFromMacedonia: Arangement[];
@@ -47,10 +48,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const [arangementsFromMacedoniaRes, izletiRes] = await Promise.all([
       fetch(
-        "http://localhost:4000/arangements?country_like=Macedonia&isPublished_like=true&type_like=hotel&type_like=apartment"
+        `${ALL_ARANGEMENTS}?country_like=Macedonia&isPublished_like=true&type_like=hotel&type_like=apartment`
       ),
       fetch(
-        "http://localhost:4000/arangements?country_like=Macedonia&isPublished_like=true&type_like=izlet"
+        `${ALL_ARANGEMENTS}?country_like=Macedonia&isPublished_like=true&type_like=izlet`
       ),
     ]);
 
