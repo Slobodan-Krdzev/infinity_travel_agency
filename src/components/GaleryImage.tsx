@@ -20,7 +20,7 @@ const GaleryImage: React.FC<GaleryImageType> = ({ image, location }) => {
 
   return (
     <>
-      <Grid item md={3} lg={2}>
+      <Grid item sm={12} md={3} lg={2}>
         <Image
           className="galery-image"
           src={`/images/${image}`}

@@ -44,7 +44,7 @@ const Newsletter = () => {
       >
         <MailOutlineIcon fontSize="large" />
         <Typography
-          variant={"h2"}
+          variant={"h3"}
           component={"h3"}
           textAlign={"center"}
           m={"0"}
