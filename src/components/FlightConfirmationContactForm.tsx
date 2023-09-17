@@ -39,6 +39,12 @@ const FlightConfirmationContactForm = ({
     };
 
     postRequest(FLY_TICKET_REQUEST_ENDPOINT, postBodyData);
+
+    nameInput.current!.value = ''
+    surnameInput.current!.value = ''
+    emailInput.current!.value = ''
+    telephoneInput.current!.value = ''
+
   };
 
   return (
