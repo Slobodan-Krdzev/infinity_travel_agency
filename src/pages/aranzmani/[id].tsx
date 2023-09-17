@@ -132,21 +132,26 @@ const ArangementDetailsPage: NextPage<ArangementDetailsPageProps> = ({
 export default ArangementDetailsPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(ALL_ARANGEMENTS);
-  const data: Arangement[] = await res.json();
 
-  const paths = data.map((arangment) => {
+    const res = await fetch(ALL_ARANGEMENTS);
+    const data: Arangement[] = await res.json();
+  
+    const paths = data.map((arangment) => {
+      return {
+        params: {
+          id: arangment.id.toString(),
+        },
+      };
+    });
+
+    
+  
     return {
-      params: {
-        id: arangment.id.toString(),
-      },
+      paths,
+      fallback: false,
     };
-  });
-
-  return {
-    paths,
-    fallback: "blocking",
-  };
+  
+  
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -155,6 +160,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   try {
     const arangementRes = await fetch(`${ALL_ARANGEMENTS}?id=${id}`);
     const arangement = await arangementRes.json();
+
+    console.log(arangement);
 
     return {
       props: {
