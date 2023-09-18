@@ -40,7 +40,7 @@ const ArangementCard = ({ linkTo, item, margin }: ArangementCardProps) => {
               alignItems={"center"}
               justifyContent={"space-between"}
             >
-              <Typography gutterBottom variant="h5" component="h4">
+              <Typography gutterBottom variant="h5" component="h2">
                 {item.name}
               </Typography>
               <span>{handleRating(item.stars)}</span>

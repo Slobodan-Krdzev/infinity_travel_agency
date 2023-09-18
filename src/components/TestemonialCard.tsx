@@ -66,7 +66,7 @@ const TestemonialCard: React.FC<TestemonialType> = ({
             <Typography
               gutterBottom
               variant="h5"
-              component="h5"
+              component="h3"
               fontWeight="bold"
             >
               {title}

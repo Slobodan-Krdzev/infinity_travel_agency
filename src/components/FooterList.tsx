@@ -33,7 +33,7 @@ const FooterList = ({
         textAlign: breakpoint ? "" : "center",
       }}
     >
-      <Typography variant="h4" component={"h5"}>
+      <Typography variant="h4" component={"h3"}>
         {title}
       </Typography>
       <ul>
