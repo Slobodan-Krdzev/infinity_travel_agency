@@ -52,6 +52,7 @@ const MobileNav = ({ destinations }: MobileNavProps) => {
             <IconButton
               sx={{ backgroundColor: DefaultTheme.palette.info.main, color: 'white' }}
               onClick={() => setIsSearchVisible(!isSearchVisible)}
+              aria-label="Search Button"
             >
               <SearchIcon fontSize="large" />
             </IconButton>
@@ -69,6 +70,7 @@ const MobileNav = ({ destinations }: MobileNavProps) => {
               id="mobile-button"
               aria-controls={open ? "mobile-menu" : undefined}
               aria-haspopup="true"
+              aria-label="Menu Button"
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
               sx={{

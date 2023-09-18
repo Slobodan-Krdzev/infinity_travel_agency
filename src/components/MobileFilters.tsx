@@ -33,7 +33,7 @@ const MobileFilters = ({showFilters, filtersState}: MobileFiltersProps) => {
     <Stack direction={'row'} justifyContent={'space-between'} width={"100%"}  marginBottom={'2rem'}>
         <Searchbar action={handleSearchInputFiltering} />
         <Button
-        
+          aria-label="Show Filters Button"
           sx={{
             color: "white",
             margin: 0,

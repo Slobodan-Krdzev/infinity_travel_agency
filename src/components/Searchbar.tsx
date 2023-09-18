@@ -37,6 +37,7 @@ const Searchbar = ({action, placeholder}: SearchbarProps) => {
               }}
             >
               <IconButton
+                aria-label="Submit Search Button"
                 type="submit"
                 edge="end"
                 color="primary"

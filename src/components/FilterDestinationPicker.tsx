@@ -54,7 +54,7 @@ const FilterDestinationPicker = (props: Props) => {
           alignItems={"center"}
           justifyContent={"space-between"}
         >
-          <Typography variant="h6" p={0} m={0}>
+          <Typography variant="h6" p={0} m={0} component={'h3'}>
             Дестинации
           </Typography>
           <Button
