@@ -3,7 +3,7 @@ import { DropdownDestinationType } from "@/types/types";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { Button, Grid, IconButton, Menu, MenuItem, Stack } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import NavlinkElement from "./NavlinkElement";
 import Searchbar from "./Searchbar";
@@ -32,6 +32,10 @@ const MobileNav = ({ destinations }: MobileNavProps) => {
       pathname: `/destinacii/${query}/Apartment`,
     });
   };
+
+  useEffect(() => {
+    handleClose()
+  }, [router.query])
 
   return (
       <Grid sx={{
