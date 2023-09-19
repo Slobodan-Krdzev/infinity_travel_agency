@@ -9,5 +9,5 @@ export const handleRating = (rating: number) => {
       arr.push(element)
     }
 
-    return arr.map((star, idx) => <StarIcon sx={{fontSize:'12px'}} key={idx} color="primary"/>)
+    return arr.map((star, idx) => <StarIcon sx={{fontSize:'10px'}} key={idx} color="primary"/>)
   }

@@ -62,23 +62,23 @@ const ArangementCard = ({ linkTo, item, margin }: ArangementCardProps) => {
               justifyContent={"space-between"}
             >
               <Stack>
-                <Typography sx={{ marginBottom: 0 }}>
+                <Typography sx={{ marginBottom: 0 }} variant={'h6'}>
                   {item.priceForNights > 1
                     ? `${item.priceForNights} ноќевања/наем соба`
                     : `${item.priceForNights} ноќевање/наем соба`}
                 </Typography>
                 {item.info.walkingDistance && (
-                  <Typography sx={{ marginBottom: 0 }}>
+                  <Typography variant={'h6'} sx={{ marginBottom: 0 }}>
                     Должина на пешачење: {item.info.walkingDistance}
                   </Typography>
                 )}
                 {item.info.distanceFromBeach && (
-                  <Typography sx={{ marginBottom: 0 }}>
+                  <Typography variant={'h6'} sx={{ marginBottom: 0 }}>
                     {item.info.distanceFromBeach} м од плажа
                   </Typography>
                 )}
                 {item.info.distanceFromCenter && (
-                  <Typography sx={{ marginBottom: 0 }}>
+                  <Typography variant={'h6'} sx={{ marginBottom: 0 }}>
                     {item.info.distanceFromCenter} м од градски центар
                   </Typography>
                 )}

@@ -68,7 +68,7 @@ const DefaultTheme = createTheme({
             lineHeight: '35px',
             marginBottom: '10px',
             '@media (max-width:1255px)': {
-                fontSize: '14px',
+                fontSize: '12px',
               }
         },
         h6: {
@@ -77,7 +77,7 @@ const DefaultTheme = createTheme({
             lineHeight: '30px',
             marginBottom: '15px',
             '@media (max-width:769px)': {
-                fontSize: '13px',
+                fontSize: '12px',
                 lineHeight: '20px',
               }
 
@@ -85,8 +85,7 @@ const DefaultTheme = createTheme({
         body1: {
             fontWeight: 400,
             fontSize: '14px',
-            lineHeight: '25px',
-            // marginBottom: '10px'
+            lineHeight: '25px'
 
         },
         body2: {
