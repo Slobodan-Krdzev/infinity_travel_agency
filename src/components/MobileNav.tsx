@@ -49,9 +49,7 @@ const MobileNav = ({ destinations }: MobileNavProps) => {
           justifyContent={"flex-end"}
         >
           {isSearchVisible ? 
-          
             <div> <Searchbar action={handleSearch } /> </div>
-            
            : (
             <IconButton
               sx={{ backgroundColor: DefaultTheme.palette.info.main, color: 'white' }}
