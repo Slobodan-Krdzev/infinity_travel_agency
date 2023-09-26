@@ -91,13 +91,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   try {
     const res = await fetch(
-      `http://localhost:4000/arangements?type_like=Izlet&isPublished=true&id=${id}`
+      `${ALL_ARANGEMENTS}?type_like=Izlet&isPublished=true&id=${id}`
     );
     const trip = await res.json();
 
     const tripToRender = trip[0];
 
-    const allTripsRes = await fetch(`http://localhost:4000/arangements?type_like=Izlet&isPublished=true`)
+    const allTripsRes = await fetch(`${ALL_ARANGEMENTS}?type_like=Izlet&isPublished=true`)
     const allTrips = await allTripsRes.json()
 
     return {
