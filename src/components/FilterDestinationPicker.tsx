@@ -29,7 +29,7 @@ const FilterDestinationPicker = (props: Props) => {
   const handleChange = (filter: string) => {
     router.push({
       pathname: `/destinacii/${filter}/Apartment`,
-    });
+    },undefined, {scroll: false});
   };
 
   if (status === "loading") {

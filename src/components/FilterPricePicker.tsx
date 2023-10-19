@@ -38,13 +38,13 @@ const FilterPricePicker = () => {
         priceLow: value[0],
         priceHigh: value[value.length - 1],
       },
-    });
+    },undefined, {scroll: false});
   };
 
   const handleResetPrice = () => {
     delete router.query.priceLow;
     delete router.query.priceHigh;
-    router.push(router);
+    router.push(router,undefined, {scroll: false});
 
     setIsSliderVisible(false);
     setValue([0, 1000]);

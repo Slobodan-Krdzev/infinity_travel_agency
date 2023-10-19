@@ -22,7 +22,7 @@ const FilterAcomodationTypePicker = (props: Props) => {
   const handleFilter = (filter: string) => {
     router.push({
       pathname: `/destinacii/${country}/${filter}`,
-    });
+    },undefined, {scroll: false});
   };
 
   return (

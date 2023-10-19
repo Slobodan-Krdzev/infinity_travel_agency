@@ -37,7 +37,7 @@ const DesktopFilters = ({ showSearch }: DesktopFiltersProps) => {
     >
       <Stack spacing={2}>
         {showSearch && <Searchbar action={handleSearchInputFiltering} />}
-        <Calendar />
+        {/* <Calendar /> */}
         <FilterDestinationPicker />
         <FilterPricePicker />
         {router.query.country !== "Exotic" && <FilterAcomodationTypePicker />}
